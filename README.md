@@ -6,6 +6,13 @@ Minimal tooling to **hunt in EDR** for compromised cline installations & **scan 
 
 ---
 
+### Malicious package.json Hashes
+| Hash | Purpose |
+|------|--------|
+| SHA256 | c2c65f4f1edc86c3645a456574ca31493c5991361ba90c0efbaf0293a14ea638 |
+| SHA1 | e93945c83dc0fb614a5c978ed4a4266022aee6ba |
+
+
 ## Clinejection Vulnerability & Recent Incident
 The  **Clinejection** vulnearbility and attack afterwards was discovered & disclosed by [**Adnan Khan**](https://adnanthekhan.com/posts/clinejection/).
 
@@ -35,12 +42,6 @@ npm install -g openclaw@latest
 ```
 
 So the openclaw install runs during **npm postinstall**; the parent process is typically **npm** or **node**, not the AI agent (Cline/VS Code/Cursor) directly.
-
-### Malicious package.json Hashes
-| Hash | Purpose |
-|------|--------|
-| SHA256 | c2c65f4f1edc86c3645a456574ca31493c5991361ba90c0efbaf0293a14ea638 |
-| SHA1 | e93945c83dc0fb614a5c978ed4a4266022aee6ba |
 
 
 ### Immediate response
