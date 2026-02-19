@@ -1,6 +1,6 @@
 # Clinejection / OpenClaw — Scanner & EDR Hunting
 
-Minimal tooling to **hunt in CrowdStrike and SentinelOne** for compromised cline installations & **scan GitHub issue titles** for the recent indirect prompt injection attack 17th Feb' 26' (Clinejection).  
+Minimal tooling to **hunt in EDR** for compromised cline installations & **scan GitHub issue titles** for the recent indirect prompt injection attack 17th Feb' 26' (Clinejection).  
 
 * One-liner EDR scan rules: [edr-rules.md](edr-rules.md).
 
