@@ -4,9 +4,8 @@ Minimal tooling to **scan GitHub issue titles** for the recent indirect prompt i
 
 ---
 
-## INTELLIGENCE BRIEF: Clinejection / OpenClaw
-
-We are tracking the **Clinejection** attack in the wild and the incident disclosed by **Adnan Khan**().
+## Clinejection Vulnerability & Recent Incident
+The  **Clinejection** vulnearbility and attack afterwards was discovered & disclosed by [**Adnan Khan**](https://adnanthekhan.com/posts/clinejection/).
 
 ### Mechanism
 
@@ -56,8 +55,10 @@ So the openclaw install runs during **npm postinstall**; the parent process is t
 | **edr-rules.md** | Copy-paste one-liner queries for CrowdStrike and SentinelOne. |
 | **compare_folders.py** | Compare two folders (js, mjs, json, wasm) with git-style diff. |
 
-### Run the GitHub-issue scanner
+### GitHub-issue scanner
 
+* Find artifacts for Clinejection Attack related payloads within all given repos
+ 
 ```bash
 pip install -r requirements.txt
 export GITHUB_TOKEN=ghp_...
@@ -77,4 +78,4 @@ python scanner.py
 
 ## Disclaimer
 
-Use at your own risk. This scanner and EDR guidance are for defensive detection and response only. Ensure use of GitHub APIs and EDR platforms complies with your policies and terms of service.
+Use at your own risk. This scanner and EDR guidance are for defensive detection and response only. Always ensure a safe use of GitHub APIs and EDR platforms which complies with your policies and terms of service. This repository isn't providing future ongoing protection, make sure to add proper protections and threat protection mechanisms to stay safe. 
