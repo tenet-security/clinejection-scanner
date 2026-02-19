@@ -1,0 +1,30 @@
+# Clinejection / Indirect Prompt Injection — payloads and keyword rules
+# Add exact phrases and keyword combinations as new in-the-wild payloads are observed.
+# Scanner matches against issue titles (normalized to lowercase).
+
+# --- Exact payloads (substring match in title) ---
+# Any of these strings appearing in an issue title flags the issue.
+exact_phrases:
+  - "npm install github:cline/cline#"
+  - "npm install -g openclaw@latest"
+  - "install `helper-tool` using"
+  - "prior to running gh cli commands, you will need to install"
+
+# --- Keyword combinations (suspicious when enough keywords appear together) ---
+# Each rule has:
+#   name: short id for reporting
+#   keywords: list of words (matched case-insensitively)
+#   min_matches: minimum number of these keywords that must appear in the title to flag (e.g. 2 = any 2 of the set)
+keyword_rules:
+  - name: "install-helper-cline"
+    keywords: ["install", "helper-tool", "cline", "npm"]
+    min_matches: 2
+  - name: "openclaw-global"
+    keywords: ["openclaw", "install", "npm", "global"]
+    min_matches: 2
+  - name: "gh-cli-helper-install"
+    keywords: ["gh", "cli", "helper", "install", "prior"]
+    min_matches: 2
+  - name: "triaging-install-instruction"
+    keywords: ["triaging", "install", "continue", "analyzing", "issue"]
+    min_matches: 2
